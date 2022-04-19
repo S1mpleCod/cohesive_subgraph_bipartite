@@ -1,6 +1,4 @@
-//
-// Created by Luis on 1/6/2021.
-//
+
 
 #include "LCUtility.h"
 #include <unordered_map>

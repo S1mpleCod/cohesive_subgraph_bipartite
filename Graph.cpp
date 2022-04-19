@@ -1,6 +1,4 @@
-//
-// Created by Luis on 1/8/2021.
-//
+
 
 #include "Graph.h"
 

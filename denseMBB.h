@@ -1,6 +1,3 @@
-//
-// Created by Luis on 25/09/2020.
-//
 
 #ifndef MBBP_DENSEMBB_H
 #define MBBP_DENSEMBB_H

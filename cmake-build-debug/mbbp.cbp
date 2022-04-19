@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mbbp">
-				<Option output="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/mbbp" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/mbbp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mbbp"/>
-					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 mbbp"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="mbbp/fast">
-				<Option output="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/mbbp" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/mbbp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,74 +75,74 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 mbbp/fast"/>
-					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 mbbp/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/BiCore.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/BiCore.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/BiCore.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/BiCore.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/CMakeFiles/LazyLinearHeap.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/CMakeFiles/LazyLinearHeap.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/LCUtility.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/LCUtility.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/LCUtility.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/LCUtility.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/UniCore.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/UniCore.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/UniCore.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/UniCore.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/basicEnu.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/basicEnu.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/basicEnu.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/basicEnu.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/basicEnuSet.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/basicEnuSet.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/basicEnuSet.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/basicEnuSet.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/bgraph.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/bgraph.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/bgraph.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/bgraph.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/denseMBB.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/denseMBB.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/denseMBB.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/denseMBB.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/mBBE.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/mBBE.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/mBBE.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/mBBE.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/main.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/main.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/ooMBE.cpp">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/ooMBE.cpp">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/ooMBE.h">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/ooMBE.h">
 			<Option target="mbbp"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

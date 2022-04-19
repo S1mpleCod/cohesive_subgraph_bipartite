@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : "Release"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"
+			"value" : "/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-release"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/mnt/c/Users/Luis/Documents/mbbp"
+			"value" : "/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1247,7 +1247,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Luis/Documents/mbbp/cmake-build-debug"
+			"value" : "/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-release"
 		},
 		{
 			"name" : "mbbp_SOURCE_DIR",
@@ -1259,7 +1259,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/mnt/c/Users/Luis/Documents/mbbp"
+			"value" : "/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite"
 		}
 	],
 	"kind" : "cache",

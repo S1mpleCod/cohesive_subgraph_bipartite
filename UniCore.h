@@ -1,6 +1,4 @@
-//
-// Created by Luis on 1/10/2021.
-//
+
 
 #ifndef MBBP_UNICORE_H
 #define MBBP_UNICORE_H

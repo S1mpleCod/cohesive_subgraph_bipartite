@@ -1,6 +1,4 @@
-//
-// Created by Luis on 1/8/2021.
-//
+
 
 #ifndef MBBP_UNIONFIND_H
 #define MBBP_UNIONFIND_H

@@ -1,6 +1,3 @@
-//
-// Created by Luis on 2/3/2021.
-//
 
 #ifndef MBBP_BICORE_H
 #define MBBP_BICORE_H

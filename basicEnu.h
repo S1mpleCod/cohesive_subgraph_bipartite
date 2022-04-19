@@ -1,6 +1,3 @@
-//
-// Created by Luis on 24/09/2020.
-//
 
 #ifndef MBBP_BASICENU_H
 #define MBBP_BASICENU_H

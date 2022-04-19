@@ -1,6 +1,3 @@
-//
-// Created by Luis on 1/9/2021.
-//
 
 #ifndef MBBP_BASICENUSET_H
 #define MBBP_BASICENUSET_H

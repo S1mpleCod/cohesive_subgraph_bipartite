@@ -1,6 +1,3 @@
-//
-// Created by Luis on 1/6/2021.
-//
 
 #ifndef MBBP_LCUTILITY_H
 #define MBBP_LCUTILITY_H

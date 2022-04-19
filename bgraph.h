@@ -1,6 +1,4 @@
-//
-// Created by Luis on 24/09/2020.
-//
+
 
 #ifndef MBBP_BGRAPH_H
 #define MBBP_BGRAPH_H

@@ -1,6 +1,4 @@
-//
-// Created by Luis on 2/3/2021.
-//
+
 
 #include "BiCore.h"
 

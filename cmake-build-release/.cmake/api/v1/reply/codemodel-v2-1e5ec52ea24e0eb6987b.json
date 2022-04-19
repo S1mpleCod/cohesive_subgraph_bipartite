@@ -48,8 +48,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/c/Users/Luis/Documents/mbbp/cmake-build-release",
-		"source" : "/mnt/c/Users/Luis/Documents/mbbp"
+		"build" : "/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite/cmake-build-release",
+		"source" : "/mnt/c/Users/Luis/Documents/mbbp/cohesive_subgraph_bipartite"
 	},
 	"version" : 
 	{

@@ -1,6 +1,4 @@
-//
-// Created by Luis on 1/9/2021.
-//
+
 
 #include "basicEnuSet.h"
 basicEnuSet::basicEnuSet(bgraph & b){

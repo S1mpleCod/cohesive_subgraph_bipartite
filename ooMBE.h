@@ -1,6 +1,3 @@
-//
-// Created by Lu Chen on 5/07/21.
-//
 
 #ifndef MBBP_OOMBE_H
 #define MBBP_OOMBE_H

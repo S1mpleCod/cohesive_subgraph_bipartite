@@ -1,6 +1,3 @@
-//
-// Created by Luis on 1/8/2021.
-//
 
 #ifndef MBBP_GRAPH_H
 #define MBBP_GRAPH_H

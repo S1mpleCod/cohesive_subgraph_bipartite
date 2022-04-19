@@ -1,6 +1,3 @@
-//
-// Created by Luis on 1/10/2021.
-//
 
 #include "UniCore.h"
 
