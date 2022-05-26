@@ -17,17 +17,21 @@ Please see ooMBE.h/.cpp for the main algorithm
 
 ## How to reproduce major results
 
-A) In main.cpp, please refine the parameter in bg.readEdgelist("---") and replace --- with an edge list of a dataset.
+- In main.cpp, please refine the parameter in bg.readEdgelist("---") and replace --- with an edge list of a dataset.
 
   Extra help:
     The default edge list supported should be: 1)vertex id is from 1, 2)directly start with an edge, 3) the delimiter should be an empty space between two vertices, and     3) each line contains one single edge. For instance: 1 2 2 1 3 2
     The code will make ids of vertices starting from 0.
     Change readEdgeList(-) in bgraph.cpp if you have different delimiters or ids.
 
-B) Build the entire project using the provided CMake scripts using CMake, and it will generate the requried makefile and compile the code to a runable file. The compiling parameters are configured in CMkaeLists.txt.
+- Build the entire project using the provided CMake scripts using CMake, and it will generate the requried makefile and compile the code to a runable file. The compiling parameters are configured in CMkaeLists.txt.
 
-C) Run the runnable file, and you will get results following the following format: 
-call adv_mbeStart() 
-switched!                            //Which vertex set is enumerated 
-Running time in milliseconds: 14327  //total running time excluding loading the data into the proposed data structure 
-Number of bicliques: 4899032         // number of maximal bicliques
+- Run the runnable file, and you will get results following the following format: 
+    
+    call adv_mbeStart() 
+    
+    switched!                            //Which vertex set is enumerated 
+    
+    Running time in milliseconds: 14327  //total running time excluding loading the data into the proposed data structure 
+    
+    Number of bicliques: 4899032         // number of maximal bicliques
