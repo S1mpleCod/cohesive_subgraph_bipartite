@@ -14,13 +14,13 @@ endif()
 #set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 #set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
-set(CMAKE_CXX_FLAGS_RELEASE "-march=native")
+#set(CMAKE_CXX_FLAGS_RELEASE "-march=native")
 #find_package( Boost COMPONENTS filesystem system REQUIRED )
 
 #include_directories(
 #        ${BOOST_INCLUDE_DIRS}
 #)
-add_compile_options(-march=native)
+#add_compile_options(-march=native)
 
 set(CMAKE_CXX_STANDARD 14)
 
