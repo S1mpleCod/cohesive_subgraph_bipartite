@@ -1,3 +1,6 @@
+//
+// Created by Lu Chen on 5/07/21.
+//
 
 #ifndef MBBP_OOMBE_H
 #define MBBP_OOMBE_H
@@ -16,7 +19,6 @@ struct PivotsNeighbour{ //local neighbour
     int vertex;
     vector<int> adj;
     vector<int> Q;
-    vector<int> agg;
     int locAdj;
 };
 class ooMBE {
@@ -28,7 +30,7 @@ public:
     bgraph &g;
     //bgraph g;
     int *counts= 0;
-    bool maxPruning= false;
+    bool maxPruning=true;
     vector<BFST> g_bfs;
     vector<bool> isPovit;
     ooMBE(bgraph &bg):g(bg){  nomb = 0;};
