@@ -1341,7 +1341,7 @@ void ooMBE::orderBatchPivots_neighbours(vector<PivotsNeighbour> & pivots) {
                             bfs[v_prime].v = cV;
                             bfs[v_prime].count=1;
                             visitedVs.emplace_back(v_prime);
-                            //p.adj.emplace_back(v_prime);
+                            p.adj.emplace_back(v_prime);
                         }else{
                             bfs[v_prime].count++;
                         }
@@ -1356,26 +1356,16 @@ void ooMBE::orderBatchPivots_neighbours(vector<PivotsNeighbour> & pivots) {
                 }
             }
 
-            //if()
-
-
+            isPovit[p.vertex]=true;
+            pivots.emplace_back(p);
 
             for(auto &vv: visitedVs){//vv: a visited vertex
                 if(bfs[vv].count==g.adjR[vv].size()){
                     //cout<<"pruned"<<endl;
                     isDominated[vv]=1;
                     pruned.emplace_back(vv);
-                    if(bfs[vv].count==g.adjR[cV].size()){
-                        p.agg.emplace_back(vv);
-                    }
-
-                }
-                if(bfs[vv].count>0&&(bfs[vv].count<g.adjR[cV].size())){
-                    p.adj.emplace_back(vv);
                 }
             }
-            isPovit[p.vertex]=true;
-            pivots.emplace_back(p);
         }
 
     }
@@ -3384,22 +3374,18 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
     int nop=0;
     for(int i=iQ;i<iB;i++){
         int v = R[i];
-
         //fill(counts, counts + size_of_R, 0);//this is O(n) but practically faster
         if(isPovit[v]==true){
 
             int adj_start=adjIndexR[v];
-            int loc_deg_v = g.adjR[v].size()-adj_start;
             PivotsNeighbour p;
             p.vertex=v;
             p.adj.reserve(iB-iP);
             p.Q.reserve(iP-iQ);
-            p.agg.reserve(iB-iP);
             int noAdj=0;
             int noQ=0;
-            int noAgg=0;
             //vector<int> visited_2_hop;
-            int two_hop_ini = size_of_R-1;
+            //int two_hop_ini = size_of_R-1;
 
             for(int j=adj_start;j<g.adjR[v].size();j++){
                 int u=g.adjR[v][j];
@@ -3412,10 +3398,8 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
                         if(g_bfs[v_prime].v!=v){
                             g_bfs[v_prime].v =v;
                             g_bfs[v_prime].count=0;
-                            two_hop[two_hop_ini] = v_prime;
-                            two_hop_ini--;
-                            //p.adj.emplace_back(v_prime);
-                            //noAdj++;
+                            p.adj.emplace_back(v_prime);
+                            noAdj++;
                         }
                         if(g_bfs[v_prime].v==v){
                             g_bfs[v_prime].count=g_bfs[v_prime].count+1;
@@ -3425,10 +3409,6 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
                             //v_prime is not a pivot
                             isPovit[v_prime]=false;
                             //cout<<"pruned!"<<endl;
-                            if(loc_deg_v_prime ==loc_deg_v){
-                                p.agg.emplace_back(v_prime);
-                                noAgg++;
-                            }
                         }
                     }else if(v!=v_prime&&indexR[v_prime]<indexR[v]){
                         if(g_bfs[v_prime].v!=v){
@@ -3441,36 +3421,15 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
                         }
                     }
                 }
+
+
             }
-
-            two_hop_ini = two_hop_ini+1;
-            for(int j=two_hop_ini;j<size_of_R;j++){
-                int v_2_hop = two_hop[j];
-                //int loc_deg_v_prime = g.adjR[v_2_hop].size()-adjIndexR[v_2_hop];
-                if(g_bfs[v_2_hop].count<loc_deg_v){
-                    //if(g_bfs[v_2_hop].count==0){
-                    //    cout<<"Wrong!"<<endl;
-                    //}
-                    p.adj.emplace_back(v_2_hop);
-                    noAdj++;
-                }
-            }
-
-
             p.locAdj = adjIndexR[v];
             p.adj.resize(noAdj);
             p.Q.resize(noQ);
-            p.agg.resize(noAgg);
             if(indexR[v]>=iP){
-
-                if(p.adj.size()==0){
-                    //cout<<"more pruning opp"<<endl;
-                    nomb++;
-                }
-                if(p.adj.size()>0){
-                    pivots.emplace_back(p);
-                    nop++;
-                }
+                pivots.emplace_back(p);
+                nop++;
             }
 
         }
@@ -3562,61 +3521,50 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
             int iA_prime = startLoc+1;   //cout<<"haha test"<<endl; it is okay
             //reset counts
 
-            //vector<int> agg;
-            //agg.reserve(P.size());
-            //int noagg=0;
+            vector<int> agg;
             for(auto &v_n:v.adj){
-                int l_degree_v_n = g.adjR[v_n].size()-adjIndexR[v_n];
-                //if(l_degree_v_n==(size_of_L - iA_prime)){
+                int ini_local=max_degree-1;
+                int ini_other=max_degree-1;
 
-                    //noagg++;
-                //}else{
-                    int ini_local=max_degree-1;
-                    int ini_other=max_degree-1;
-
-                    int adj_loc = adjIndexR[v_n];
-                    for(int j=adj_loc;j<g.adjR[v_n].size();j++){
-                        int u= g.adjR[v_n][j];
-                        if (indexL[u] >= iA_prime) {
-                            ln_for_vex[ini_local] = u;
-                            ini_local--;
-                            //localNeighbour.emplace_back(u);
-                        }else{
-                            other_for_vex[ini_other] = u;
-                            ini_other--;
-                        }
+                int adj_loc = adjIndexR[v_n];
+                for(int j=adj_loc;j<g.adjR[v_n].size();j++){
+                    int u= g.adjR[v_n][j];
+                    if (indexL[u] >= iA_prime) {
+                        ln_for_vex[ini_local] = u;
+                        ini_local--;
+                        //localNeighbour.emplace_back(u);
+                    }else{
+                        other_for_vex[ini_other] = u;
+                        ini_other--;
                     }
-                    ini_local = ini_local+1;
-                    ini_other = ini_other+1;
+                }
+                ini_local = ini_local+1;
+                ini_other = ini_other+1;
 
 
-                    int adj_ini = g.adjR[v_n].size() - 1;
-                    //for (auto & u:localNeighbour){
-                    for(int j=ini_local;j<max_degree;j++){
-                        int u = ln_for_vex[j];
-                        g.adjR[v_n][adj_ini] = u;
-                        adj_ini--;
-                    }
-                    adjIndexR[v_n] = adj_ini + 1;
-                    for(int j=ini_other;j<max_degree;j++){
-                        int u = other_for_vex[j];
-                        g.adjR[v_n][adj_ini] = u;
-                        adj_ini--;
-                    }
-                    //if((max_degree-ini_local)==size_of_L - iA_prime){
-                    //    agg.emplace_back(v_n);
-                    //    noagg++;
-                        //cout<<"Must be something here!"<<endl;
-                    //}else if((max_degree-ini_local)>0&&(max_degree-ini_local)<(size_of_L - iA_prime)){
-                        P_prime.emplace_back(make_pair(v_n, adjIndexR[v_n]));
-                    //}
-               // }
-
+                int adj_ini = g.adjR[v_n].size() - 1;
+                //for (auto & u:localNeighbour){
+                for(int j=ini_local;j<max_degree;j++){
+                    int u = ln_for_vex[j];
+                    g.adjR[v_n][adj_ini] = u;
+                    adj_ini--;
+                }
+                adjIndexR[v_n] = adj_ini + 1;
+                for(int j=ini_other;j<max_degree;j++){
+                    int u = other_for_vex[j];
+                    g.adjR[v_n][adj_ini] = u;
+                    adj_ini--;
+                }
+                if((max_degree-ini_local)==size_of_L - iA_prime){
+                    agg.emplace_back(v_n);
+                    //cout<<"Must be something here!"<<endl;
+                }else if((max_degree-ini_local)>0&&(max_degree-ini_local)<(size_of_L - iA_prime)){
+                    P_prime.emplace_back(make_pair(v_n, adjIndexR[v_n]));
+                }
             }
 
             int ini_pos = iB_prime-1;
-
-            for(auto &v_b:v.agg){
+            for(auto &v_b:agg){
                 if(indexR[v_b]!=ini_pos){
                     int tmpv = R[ini_pos];
                     R[ini_pos] = v_b;
@@ -3629,8 +3577,6 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
             //int iP_prime = ini_pos+1;
             iB_prime = ini_pos+1;
             ini_pos = iB_prime-1;
-
-
 
             for(auto &v_pp:P_prime){
                 int v_b = v_pp.first;
@@ -3647,9 +3593,6 @@ void ooMBE::adv_order_PIMBEA_local(int iA,
 
             nomb++;
 
-            if(P_prime.size()==0){
-                continue;
-            }
 
 
 
@@ -3822,8 +3765,9 @@ void ooMBE::adv_mbeStart_reuse_full() {
         g.switchLR();
         cout << "switched!" << endl;
     }
-    //g.switchLR();
 
+
+    //g.switchLR();
 
     //printVector(bcore.uniOrder);
 
@@ -3867,7 +3811,7 @@ void ooMBE::adv_mbeStart_reuse_full() {
     BiCore bcore(g);
     bcore.e2hopCore(g.adjR, g.adjL);
     //end of problem
-    cout<<"core finish"<<endl;
+
     if (maxPruning) {
         //Future work, further refine the unilateral order to maximize pruning
         //This optimisation is for sequential algorithm,
@@ -3928,12 +3872,12 @@ void ooMBE::adv_mbeStart_reuse_full() {
     //    cout << "Wrong!" << endl;
     //}
     //adjust R, IndexR, but adjIndexR keeps the same
-    //vector<int> orderIndex(bcore.uniOrder.size());
+    vector<int> orderIndex(bcore.uniOrder.size());
     for (int i = 0; i < bcore.uniOrder.size(); i++) {
         int v = bcore.uniOrder[i];
         R[i] = v;
         indexR[v] = i;
-        //orderIndex[v] = i;
+        orderIndex[v] = i;
     }
 
 
@@ -3993,11 +3937,10 @@ void ooMBE::adv_mbeStart_reuse_full() {
 
     int size_of_P;
     //for(int z=0;z<pivots_plus_neighbours.size();z++){
-    for (int z=0;z<pivots_plus_neighbours.size();z++){
-    //for (auto &vn: pivots_plus_neighbours) {
+
+    for (auto &vn: pivots_plus_neighbours) {
         //cout<<"Progress:"<<++count<<endl;
         //move v to iB
-        PivotsNeighbour vn = pivots_plus_neighbours[z];
         int v = vn.vertex;
         /**
         if(count==10000){
@@ -4029,36 +3972,23 @@ void ooMBE::adv_mbeStart_reuse_full() {
             cout<<count<<":"<<nomb<<endl;
         }else if(count==3120000){
             cout<<count<<":"<<nomb<<endl;
-        }else
-        if(z==3244000) {
-            cout << nomb << endl;
+        }else if(count==3200000){
+            cout<<count<<":"<<nomb<<endl;
+        }else if(count==3250000){
+            cout<<count<<":"<<nomb<<endl;
+        }else if(count==3150000){
+            cout<<count<<":"<<nomb<<endl;
+        }**/
+        if(count>=3100000){
+            cout<<count<<":"<<nomb<<endl;
         }
-        if(z==3245000){
-            cout<<z<<":"<<nomb<<endl;
-        }else if(z==3246000){
-            cout<<z<<":"<<nomb<<endl;
-        }else if(z==3247000){
-            cout<<z<<":"<<nomb<<endl;
-        }else if(z==3248000){
-            cout<<z<<":"<<nomb<<endl;
-        }else if(z==3249000){
-            cout<<z<<":"<<nomb<<endl;
-        }else if(z==3250000){
-            cout<<z<<":"<<nomb<<endl;
+        count++;
+        if(false){
+            while(count<3100000){
+                continue;
+            }
+
         }
-         **/
-        /**
-        if(count==3290001){
-            cout<<"start"<<endl;
-        }
-        **/
-        //if(z>3250000){
-        //    cout<<vn.adj.size()<<", "<<z<<":"<<nomb<<endl;
-        //}//else if(count==3200000){
-        //    cout<<count<<":"<<nomb<<endl;
-        //}
-        //if()
-        //count++;
 
         //cout<<"Processing "<<v<<endl;
         int iP_prime = 0, iA_prime = 0, iB_prime = 0, iQ_prime = 0;
@@ -4103,7 +4033,7 @@ void ooMBE::adv_mbeStart_reuse_full() {
         //TODO problem starts here! Fixed!
         //align 2-hop neighbours starting from iB-1
         //int ini_pos = iB_prime-1;
-        ///vector<int> agg;
+        vector<int> agg;
         //vector<int> notP;
         for(auto &v_p:vn.adj){
             //vector<int> localNeighbour;
@@ -4136,18 +4066,17 @@ void ooMBE::adv_mbeStart_reuse_full() {
                 g.adjR[v_p][adj_ini] = u;
                 adj_ini--;
             }
-            //if((max_degree-ini_local)==size_of_L - iA_prime){
-                //agg.emplace_back(v_p);
-                //cout<<"wrong"<<endl;
-           // }else if((max_degree-ini_local)>0&&(max_degree-ini_local)!=(size_of_L - iA_prime)){
-           P_prime.emplace_back(make_pair(v_p, adjIndexR[v_p]));
-            //}
+            if((max_degree-ini_local)==size_of_L - iA_prime){
+                agg.emplace_back(v_p);
+            }else if((max_degree-ini_local)>0&&(max_degree-ini_local)!=(size_of_L - iA_prime)){
+                P_prime.emplace_back(make_pair(v_p, adjIndexR[v_p]));
+            }
 
         }
         //iP_prime = ini_pos+1;
 
         int ini_pos = iB_prime-1;
-        for(auto &v_b:vn.agg){
+        for(auto &v_b:agg){
             if(indexR[v_b]!=ini_pos){
                 int tmpv = R[ini_pos];
                 R[ini_pos] = v_b;
@@ -4177,9 +4106,6 @@ void ooMBE::adv_mbeStart_reuse_full() {
 
         nomb++;
 
-        if(P_prime.size()==0){
-            continue;
-        }
 
         //Align old Q into the correct position
         int iniPos_Q = iP_prime - 1;
@@ -4507,9 +4433,10 @@ void ooMBE::adv_mbeStart_reuse_full() {
     }
     **/
 
+
     //if(R!= 0) {delete [] R;R=0;}
     auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(stop - start);
+    auto duration = duration_cast<microseconds>(stop - start);
     cout << duration.count() << endl;
 }
 
