@@ -28,4 +28,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 
 
-add_executable(mbbp main.cpp bgraph.cpp bgraph.h basicEnu.cpp basicEnu.h denseMBB.cpp denseMBB.h LCUtility.cpp LCUtility.h CMakeFiles/LazyLinearHeap.h basicEnuSet.cpp basicEnuSet.h UniCore.cpp UniCore.h BiCore.cpp BiCore.h mBBE.cpp mBBE.h ooMBE.cpp ooMBE.h)
+add_executable(mbbp main.cpp bgraph.cpp bgraph.h basicEnu.cpp basicEnu.h denseMBB.cpp denseMBB.h LCUtility.cpp LCUtility.h basicEnuSet.cpp basicEnuSet.h UniCore.cpp UniCore.h BiCore.cpp BiCore.h mBBE.cpp mBBE.h ooMBE.cpp ooMBE.h)
