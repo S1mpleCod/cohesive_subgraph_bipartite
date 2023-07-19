@@ -19,14 +19,20 @@ Please see ooMBE.h/.cpp for the main algorithm
 
 - In main.cpp, please refine the parameter in bg.readEdgelist("---") and replace --- with an edge list of a dataset.
 
+- Build the entire project using the provided CMake scripts using CMake, and it will generate the requried makefile and compile the code to a runable file. The compiling parameters are configured in CMkaeLists.txt.
+
+- Usage:
+  
+  ```shell
+  cmake CMakeList.txt
+  make
+  ./mbbp <edgelist_path>
+  ```
+
 - Edge list format:
     - The ID should start from 1.
     - The left and right set's IDs cannot be duplicate.
     - One line (end with \t) represents one edge pair
-
-- Build the entire project using the provided CMake scripts using CMake, and it will generate the requried makefile and compile the code to a runable file. The compiling parameters are configured in CMkaeLists.txt.
-
-- 
 
 
 - Run the runnable file, and you will get results following the following format: 
