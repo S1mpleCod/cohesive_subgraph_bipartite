@@ -19,12 +19,21 @@ Please see ooMBE.h/.cpp for the main algorithm
 
 - In main.cpp, please refine the parameter in bg.readEdgelist("---") and replace --- with an edge list of a dataset.
 
-  Extra help:
-    The default edge list supported should be: 1)vertex id is from 1, 2)directly start with an edge, 3) the delimiter should be an empty space between two vertices, and     3) each line contains one single edge. For instance: 1 2 2 1 3 2
-    The code will make ids of vertices starting from 0.
-    Change readEdgeList(-) in bgraph.cpp if you have different delimiters or ids.
-
 - Build the entire project using the provided CMake scripts using CMake, and it will generate the requried makefile and compile the code to a runable file. The compiling parameters are configured in CMkaeLists.txt.
+
+- Usage:
+  
+  ```shell
+  cmake CMakeList.txt
+  make
+  ./mbbp <edgelist_path>
+  ```
+
+- Edge list format:
+    - The ID should start from 1.
+    - The left and right set's IDs cannot be duplicate.
+    - One line (end with \t) represents one edge pair
+
 
 - Run the runnable file, and you will get results following the following format: 
     

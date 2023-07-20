@@ -15,7 +15,7 @@ using namespace std;
 
 void testDataDense(bgraph &g);
 void testDataSparse(bgraph &g);
-int main() {
+int main(int argv, char *argc[]) {
 
 
     //newEdgeList("../out.livejournal-groupmemberships","",0);
@@ -48,8 +48,8 @@ int main() {
      * IM2 for IMDB large
      * LG for livejournal
      */
-    bg.readEdgeList("../IM2");
-
+    string file_path = argc[1];
+    bg.readEdgeList(file_path);
     //bgraph bg;
     //bg.readAdj(0,"../testLadj.txt");
     //bg.readAdj(1,"../testRadj.txt");
